@@ -1,10 +1,10 @@
 const deepClone = (obj) => {
-  let copy = Array.isArray(obj) ? [] : {};
+  let copyObj = Array.isArray(obj) ? [] : {};
   Object.keys(obj).forEach(key => {
     const val = obj[key];
-    copy[key] = typeof val === 'object' ? deepClone(val) : val;
+    copyObj[key] = typeof val === 'object' ? deepClone(val) : val;
   })
-  return copy;
+  return copyObj;
 }
 
 // examples for deep-clone

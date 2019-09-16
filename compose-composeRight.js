@@ -16,7 +16,6 @@ console.log(resultR(10, 10));
 
 // const composeR2 = (...fns) => fns.reduceRight((acc, curr) => (...args) => acc(curr(...args)));
 
-
 // const result2 = composeR2(multiplyByR5, addR);
 
 // console.log(result2(10, 10));

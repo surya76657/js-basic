@@ -25,12 +25,12 @@ Array.prototype.reduce = function (fn, initial) {
   let last = initial;
   if (initial) {
     for (let i = 0; i < this.length; i++) {
-      last = fn(last, this[i]);
+      last = fn(last, this[i], i, this);
     }
   } else {
     last = this[0];
     for (let i = 1; i < this.length; i++) {
-      last = fn(last, this[i]);
+      last = fn(last, this[i], i, this);
     }
   }
   return last;
